@@ -1,16 +1,17 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+import pygame
+pygame.init()
+window =pygame.display.set_mode((800,800))
+run=True
+clock=pygame.time.Clock()
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+RED = (255, 0, 0)
+while run:
+    clock.tick(60)
+    for event in pygame.event.get():
+        if event.type==pygame.QUIT:
+            run=False
+    window.fill(WHITE)
+    pygame.draw.circle(window,RED,(100,100),10)
+    pygame.display.flip()
+pygame.quit()
