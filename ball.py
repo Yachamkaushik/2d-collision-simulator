@@ -21,3 +21,6 @@ class Ball:
             self.vy*=-1
         self.x += self.vx
         self.y += self.vy
+    def reverse(self):
+        self.vx = self.vx*-1
+        self.vy = self.vy*-1
